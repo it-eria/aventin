@@ -21,11 +21,13 @@ $(function() {
         pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
         updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
         beforeMove: function(index) {
+            $('.header, .footer').hide();
 
         },  // This option accepts a callback function. The function will be called before the page moves.
         afterMove: function(index) {
             $('.screen[data-index='+index+'] .aos-init').addClass('aos-animate');
             checkBgColorOfSection(index);
+            $('.header, .footer').show();
         },   // This option accepts a callback function. The function will be called after the page moves.
         loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         keyboard: true,                  // You can activate the keyboard controls
@@ -39,12 +41,12 @@ $(function() {
 
     function checkBgColorOfSection(index) {
         if($('.screen[data-index='+index+']').hasClass('screen--dark')) {
-            $('.img-white').hide(300);
-            $('.img-dark').show(300);
+            $('.img-white').hide();
+            $('.img-dark').show();
             $('.header, .footer').addClass('on-dark-screen');
         } else {
-            $('.img-white').show(300);
-            $('.img-dark').hide(300);
+            $('.img-white').show();
+            $('.img-dark').hide();
             $('.header, .footer').removeClass('on-dark-screen');
         }
     }
