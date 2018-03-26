@@ -57,6 +57,7 @@
         width: 30px;
         height: 17px;
         position: relative;
+        transform-style: preserve-3d;
         span {
             display: block;
             position: absolute;
@@ -66,8 +67,9 @@
             height: 1px;
             background-color: $text-dark;
             transition: all .3s ease-in-out;
-            transform: translate(0, -50%);
+            transform: translate(0, -1px);
             opacity: 1;
+            transform-style: preserve-3d;
         }
         &:before, &:after {
             content: '';
@@ -79,6 +81,7 @@
             left: 0;
             transform-origin: 50% 50%;
             transition: all .3s ease-in-out;
+            transform-style: preserve-3d;
         }
         &:before {
             top: 0;
