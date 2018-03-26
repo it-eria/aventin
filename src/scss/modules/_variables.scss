@@ -1,0 +1,33 @@
+// Fonts
+$icon-facebook: \e900;
+$icon-g-plus: \e901;
+$icon-insta: \e902;
+$icon-mail: \e903;
+$icon-phone: \e904;
+
+// Backgrounds
+$screen-white: #f3f3f3;
+$screen-dark: #0f1011;
+
+// Text colors
+$text-white: #ffffff;
+$text-dark: #1d2126;
+
+// Pagination color
+$page-pagination-color: #8d836a;
+
+// Main nav text color
+$main-nav-color: #979797;
+
+// Section title underline
+$section-title-underline: #8d836a;
+
+
+// Mixins
+@mixin font($value, $italic) {
+    @if $italic {
+        font-family: "MuseoSansCyrl-#{$value}Italic", sans-serif;
+    } @else {
+        font-family: "MuseoSansCyrl-#{$value}", sans-serif;
+    }
+}

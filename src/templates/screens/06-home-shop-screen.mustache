@@ -1,0 +1,49 @@
+<section class="screen">
+    <div class="container">
+        <div class="row justify-content-center mt-0 mt-lg-3">
+            <div class="col-12 col-sm-10">
+                <div class="section-title" data-aos="fade-right">
+                    <h2>Магазин</h2>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-sm-5">
+                        <div class="section-title-after" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
+                            <small>Тут також можна придбати професійну косметику і засоби для домашнього догляду марок L’Oreal, Kerastase</small>
+                            <div class="text-right mt-3 d-none d-lg-block d-xl-block" data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">
+                                <a href="#" class="take-service-btn take-service-btn-transparent">Каталог товарів</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center h-100 mt-2">
+            <div class="col-12 col-sm-10">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-slider" data-js="product-slider" data-aos="fade-in" data-aos-duration="500" data-aos-delay="200">
+                            {{#product-slides}}
+                            <div class="product-slider__slide" data-aos="fade-in" data-aos-duration="300" data-aos-delay="{{delay}}">
+                                <a href="#" class="product-wraper">
+                                    <div class="photo-wraper d-flex">
+                                        <img src="assets/img/{{photo-name}}.png" alt="product" class="img-fluid">
+                                    </div>
+                                    <div class="slide-caption">
+                                        <span class="name">Alliance perfect LOREAL</span>
+                                        <span class="position">Хайлайтер</span>
+                                    </div>
+                                </a>
+                            </div>
+                            {{/product-slides}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 d-block d-lg-none d-xl-none">
+            <div class="col-12 text-center">
+                <a href="#" class="take-service-btn take-service-btn-transparent">Каталог товарів</a>
+            </div>
+        </div>
+    </div>
+</section>

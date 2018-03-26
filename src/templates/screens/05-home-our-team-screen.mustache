@@ -1,0 +1,35 @@
+<section class="screen screen--dark">
+    <div class="container">
+        <div class="row justify-content-center mt-0 mt-lg-3">
+            <div class="col-12 col-sm-10">
+                <div class="section-title" data-aos="fade-right">
+                    <h2>Наша команда</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end mt-3">
+            <div class="col-12 col-sm-11">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="team-slider" data-js="team-slider" data-aos="fade-in" data-aos-duration="500" data-aos-delay="200">
+                            {{#team-slides}}
+                            <div class="team-slider__slide" data-aos="fade-in" data-aos-duration="300" data-aos-delay="{{delay}}">
+                                <a href="#" class="photo-wraper" style="background-image:url(assets/img/{{photo-name}}.jpg);"></a>
+                                <div class="slide-caption">
+                                    <span class="name">Наталя Жога</span>
+                                    <span class="position">Перукар</span>
+                                </div>
+                            </div>
+                            {{/team-slides}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 d-block d-lg-none d-xl-none">
+            <div class="col-12 text-center">
+                <a href="#" class="take-service-btn take-service-btn-transparent">Переглянути більше</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+body, html {
+    min-width: 320px;
+    * {
+        @include font(100, false);
+        outline: none;
+    }
+    @media screen and (max-width: 992px) {
+        overflow: auto!important;
+    }
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+@function unicode($str) {
+    @return unquote("\"") + $str + unquote("\"");
+}
+  
+.icon-facebook {
+    &:before {
+      content: unicode($icon-facebook); 
+    }
+}
+.icon-g-plus {
+    &:before {
+      content: unicode($icon-g-plus); 
+    }
+}
+.icon-insta {
+    &:before {
+      content: unicode($icon-insta); 
+    }
+}
+.icon-mail {
+    &:before {
+      content: unicode($icon-mail); 
+    }
+}
+.icon-phone {
+    &:before {
+      content: unicode($icon-phone); 
+    }
+}
+
+@media (min-width: 1470px) {
+    .container {
+        max-width: 1440px;
+    }
+}
