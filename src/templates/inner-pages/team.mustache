@@ -1,0 +1,26 @@
+<section class="screen screen--dark pt-4 pt-lg-0">
+    <div class="container">
+        <div class="row justify-content-center mt-0">
+            <div class="col-12 col-sm-10">
+                <div class="section-title" data-aos="fade-right">
+                    <h2>Наша команда</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-12 col-sm-10">
+                <div class="d-flex team-list">
+                    {{#team-item}}
+                    <div class="team-slider__slide" data-aos="fade-in" data-aos-duration="300">
+                        <a href="#" class="photo-wraper" style="background-image:url(assets/img/{{photo-name}}.jpg);"></a>
+                        <div class="slide-caption">
+                            <span class="name">Наталя Жога</span>
+                            <span class="position">Перукар</span>
+                        </div>
+                    </div>
+                    {{/team-item}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -132,6 +132,9 @@
     &.on-scroll {
         opacity: 0;
     }
+    &--dark {
+        background-color: $screen-dark;
+    }
     @media screen and (max-width: 991px) {
         position: relative;
         padding: 15px 0;
@@ -195,6 +198,9 @@
         * {
             color: $text-white;
         }
+    }
+    &--dark {
+        background-color: $screen-dark;
     }
     @media screen and (max-width: 991px) {
         position: static;
@@ -677,6 +683,7 @@
     padding: 50px 0 0 0;
     position: relative;
     &__slide {
+        min-width: 217px;
         &:hover {
             .slide-caption {
                 span {
@@ -703,7 +710,7 @@
             &:hover {
                 transform: scale(1.1);
                 & + .slide-caption {
-                    margin-top: 20px;
+                    top: 20px;
                 }
             }
             @media screen and (max-width: 991px) {
@@ -719,6 +726,7 @@
         }
         .slide-caption {
             position: relative;
+            top: 0;
             padding-left: 20px;
             transition: all .5s ease-in-out;
             span {
@@ -977,5 +985,27 @@
     }
     @media screen and (max-width: 991px) {
         height: 163px;
+    }
+}
+
+.team-list {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    .team-slider__slide {
+        height: auto!important;
+        flex: 1 0 15%;
+        margin: 0 15px 60px 0;
+        max-width: 219px!important;
+        .photo-wraper {
+            max-width: 100%!important;
+            width: 100%;
+            padding-top: 150%;
+        }
+        @media screen and (max-width: 480px) {
+            flex: 1 0 40%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        justify-content: center;
     }
 }
