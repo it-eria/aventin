@@ -1,0 +1,62 @@
+<section class="screen screen--white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-11">
+                <div class="section-title" data-aos="fade-right">
+                    <h2>Каталог продукції</h2>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-sm-5">
+                        <div class="section-title-after" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
+                            <small>Тут також можна придбати професійну косметику і засоби для домашнього догляду марок L’Oreal, Kerastase</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-sm-11 col-md-2">
+                <aside class="pr-3">
+                    <div class="form-wraper mt-3 mb-3">
+                        <form class="f-search">
+                            <input type="text" placeholder="Пошук продукції">
+                            <button type="submit"></button>
+                        </form>
+                    </div>
+                    <div class="filter-wraper mt-5">
+                        <h6>Бренд</h6>
+                        <ul>
+                            <li>
+                                <a href="#" class="active">L’oreal</a>
+                            </li>
+                            <li>
+                                <a href="#">Kerastase</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-12 col-sm-11 col-md-9">
+                <div class="row">
+                    {{#catalog-product-item}}
+                    <!-- Catalog product item -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-slider__slide mt-3 mb-3" data-aos="fade-in" data-aos-duration="300">
+                            <a href="#" class="product-wraper no-gutter">
+                                <div class="photo-wraper d-flex">
+                                    <img src="assets/img/{{photo-name}}.png" alt="product" class="img-fluid">
+                                </div>
+                                <div class="slide-caption">
+                                    <span class="name">Alliance perfect LOREAL</span>
+                                    <span class="position">Хайлайтер</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /Catalog product item -->
+                    {{/catalog-product-item}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

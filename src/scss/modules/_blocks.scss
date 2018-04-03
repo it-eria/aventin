@@ -1,5 +1,6 @@
 // Screens
 .screen {
+    position: relative;
     padding: 30px 0;
     background-color: $screen-white;
     * {
@@ -781,19 +782,35 @@
             position: relative;
             padding-left: 20px;
             transition: all .5s ease-in-out;
+            text-decoration: none;
             span {
                 display: block;
                 font-size: 16px;
                 color: $text-dark;
+                text-decoration: none;
                 &.name {
                     @include font(100, false);
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: none;
+                    }
                 }
                 &.position {
                     @include font(700, false);
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: none;
+                    }
                 }
                 @media screen and (max-width: 991px) {
                     font-size: 12px;
                 }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                text-decoration: none;
             }
             &:before {
                 content: '';
@@ -809,17 +826,22 @@
             }
         }
     }
-    .product-wraper {
-        display: block;
-        border: 2px solid transparent;
+}
+
+.product-wraper {
+    display: block;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    padding: 10px;
+    margin: 0 30px;
+    &.no-gutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &:hover {
         text-decoration: none;
-        transition: all .3s ease-in-out;
-        padding: 10px;
-        margin: 0 30px;
-        &:hover {
-            text-decoration: none;
-            border-color: #8d836a;
-        }
+        border-color: #8d836a;
     }
 }
 
@@ -1153,6 +1175,103 @@
                     &:last-child {
                         @include font(700, false);
                     }
+                }
+            }
+        }
+    }
+}
+
+.form-wraper {
+    position: relative;
+}
+
+.f-search {
+    display: block;
+    width: 100%;
+    input {
+        display: block;
+        width: 100%;
+        @include font(100, false);
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid #8d836a;
+        padding-left: 24px;
+        color: $text-dark;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $text-dark;
+            opacity: 1;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: $text-dark;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: $text-dark;
+            opacity: 1;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: $text-dark;
+            opacity: 1;
+        }
+    }
+    button {
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        background-image: url(../img/search-icon.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        border: none;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+}
+
+.filter-wraper {
+    h6 {
+        padding-left: 23px;
+        @include font(700, false);
+    }
+    ul {
+        li {
+            a {
+                display: block;
+                padding-left: 23px;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 11px;
+                    height: 1px;
+                    background-color: #8d836a;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 11px;
+                    background-color: #8d836a;
+                    position: absolute;
+                    left: 5px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+                &.active {
+                    &:after {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    color: #8d836a;
+                    text-decoration: underline;
                 }
             }
         }

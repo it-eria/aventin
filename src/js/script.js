@@ -164,7 +164,7 @@ $(function() {
     });
 
     $('[data-js="middle-row"]').css({
-        'height': $('.screen').height() - $('.section-title').outerHeight() - $('.header').outerHeight() - $('.footer').outerHeight() - 50
+        'height': $(window).height() - $('.section-title').outerHeight() - $('.header').outerHeight() - $('.footer').outerHeight() - 50
     });
 
     $('[data-js="bg-circle"]').each(function() {
@@ -185,6 +185,12 @@ $(function() {
         sectionPaddings();
         $('[data-js="middle-row"]').css({
             'height': $('.screen').height() - $('.section-title').outerHeight() - $('.header').outerHeight() - $('.footer').outerHeight() - 50
+        });
+        $('[data-js="bg-circle"]').each(function() {
+            $(this).width($(this).height());
+        });
+        $('[data-js="middle-row"]').css({
+            'height': $(window).height() - $('.section-title').outerHeight() - $('.header').outerHeight() - $('.footer').outerHeight() - 50
         });
         $('[data-js="bg-circle"]').each(function() {
             $(this).width($(this).height());

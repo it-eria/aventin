@@ -158,5 +158,103 @@
         {
             "photo-name": "team-slide-27"
         }
+    ],
+    "catalog-product-item": [
+        {
+            "photo-name": "product-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "product-1"
+        }
+        ,
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "product-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "product-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "product-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "product-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        }
     ]
 }
