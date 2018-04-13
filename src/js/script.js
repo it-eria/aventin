@@ -186,7 +186,8 @@ $(function() {
         $('#'+$(this).attr('href')).fadeIn().css('display', 'flex');
     });
 
-    $('.close-popup').on('click', function() {
+    $('.close-popup').on('click', function(e) {
+        e.preventDefault();
         $('.popup').fadeOut().removeAttr('style');
     })
 
