@@ -180,6 +180,16 @@ $(function() {
         }
     }
 
+    // Popup
+    $('.product-wraper').on('click', function(e) {
+        e.preventDefault();
+        $('#'+$(this).attr('href')).fadeIn().css('display', 'flex');
+    });
+
+    $('.close-popup').on('click', function() {
+        $('.popup').fadeOut().removeAttr('style');
+    })
+
     sectionPaddings();
     $(window).on('resize', function() {
         sectionPaddings();
