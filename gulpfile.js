@@ -84,7 +84,7 @@ gulp.task('js-to-build', function() {
 // Images
 gulp.task('images-to-build', function() {
       return gulp.src(paths.src.img + '/*.*')
-            .pipe(imagemin({ progressive: true }))
+            // .pipe(imagemin({ progressive: true }))
             .pipe(gulp.dest(paths.build.img))
             .pipe(browserSync.stream());
 });

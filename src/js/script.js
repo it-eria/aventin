@@ -5,6 +5,11 @@
 //= vendors/jquery.onepage-scroll.js
 
 $(function() {
+    setTimeout(function() {
+        if($('.square').length > 0) {
+            $('.square').removeAttr('style');
+        }
+    }, 3000);
     // Init animate on scroll
     AOS.init({
         disable: function () {
@@ -100,7 +105,7 @@ $(function() {
 
     $('[data-js="team-slider"]').slick({
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 5,
         autoplay: true,
         autoplaySpeed: 3000,
         prevArrow: '<a href="#" class="team-arr team-arr-prev">',
@@ -110,19 +115,22 @@ $(function() {
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 4
+                    slidesToShow: 4,
+                    slidesToScroll: 4
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 2,
+                    slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 479,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]
@@ -130,22 +138,31 @@ $(function() {
 
     $('[data-js="product-slider"]').slick({
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         autoplay: true,
         autoplaySpeed: 3000,
         prevArrow: '<a href="#" class="product-arr product-arr-prev">',
         nextArrow: '<a href="#" class="product-arr product-arr-next">',
         responsive: [
             {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    slidesToScroll: 3
                 }
             }
         ]

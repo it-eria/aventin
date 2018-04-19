@@ -222,12 +222,12 @@
     }
   }
   &--dark {
-    background-color: $screen-dark;
+    background-image: linear-gradient( -31deg, rgb(15,16,17) 0%, rgb(50,54,57) 100%);
   }
   @media screen and (max-width: 991px) {
     position: static;
     padding: 15px 0 5px;
-    background-color: $screen-dark;
+    background-image: linear-gradient( -31deg, rgb(15,16,17) 0%, rgb(50,54,57) 100%);
     * {
       color: $text-white;
       font-size: 12px;
@@ -417,7 +417,7 @@
   }
   &-after {
     small {
-      @include font(500, false);
+      @include font(300, false);
       font-size: 16px;
     }
   }
@@ -448,6 +448,7 @@
       font-size: 16px;
       margin: 0 0 5px 0;
       padding: 0;
+      margin-bottom: 10px;
       span {
         display: block;
         padding-left: 15px;
@@ -471,6 +472,7 @@
         &:last-child {
           padding-left: 15px;
           letter-spacing: 1.6px;
+          font-size: 14px;
         }
       }
     }
@@ -721,8 +723,29 @@
   padding: 50px 0 0 0;
   position: relative;
   &__slide {
-    min-width: 217px;
-    padding-bottom: 30px;
+    padding: 0 15px 20px;
+    @media screen and (max-width: 480px) {
+      padding: 0 40px;
+    }
+    .photo-wraper {
+      display: block;
+      width: 100%;
+      padding-top: 185%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      transition: all .3s ease-in-out;
+      @media screen and (max-width: 480px) {
+        padding-top: 135%;
+        background-position: 50% 0;
+      }
+      &:hover {
+        transform: scale(1.1);
+        & + .slide-caption {
+          top: 20px;
+        }
+      }
+    }
     &:hover {
       .slide-caption {
         span {
@@ -734,33 +757,6 @@
             @include font(100, false);
           }
         }
-      }
-    }
-    .photo-wraper {
-      display: inline-block;
-      width: 100%;
-      max-width: 217px;
-      height: 407px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-      background-color: #8d836a;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-        & + .slide-caption {
-          top: 20px;
-        }
-      }
-      @media screen and (max-width: 991px) {
-        max-width: 140px;
-        height: 157px;
-        background-position: 50% 0;
-      }
-      @media screen and (max-width: 1440px) {
-        max-width: 187px;
-        height: 317px;
-        background-position: 50% 0;
       }
     }
     .slide-caption {
@@ -795,10 +791,28 @@
         transform: translate(0, -50%);
       }
     }
+  }
+  .team-arr {
     @media screen and (max-width: 991px) {
-      max-width: 100%;
-      width: auto;
+      top: 50%;
+      transform: translate(0, -50%);  
+      z-index: 7777; 
     }
+    &-next {
+      @media screen and (max-width: 991px) {
+        right: 0;
+      }
+    }
+    &-prev {
+      @media screen and (max-width: 991px) {
+        left: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -808,7 +822,7 @@
   &__slide {
     display: inline-block;
     .photo-wraper {
-      height: 250px;
+      // height: 250px;
       justify-content: center;
       align-items: center;
     }
@@ -893,7 +907,7 @@
   }
   .partner-wraper {
     display: flex;
-    height: 200px;
+    // height: 200px;
     border: 2px solid transparent;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -906,7 +920,7 @@
       border-color: #8d836a;
     }
     @media screen and (max-width: 991px) {
-      height: 90px;
+      // height: 90px;
       position: relative;
       top: -10px;
     }
@@ -1012,6 +1026,12 @@
     background-image: url(../img/marker-icon.svg);
     background-size: 17px auto;
     background-position: 4px 0;
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: 15px;
+    li {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -1428,6 +1448,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all .3s ease-in-out;
     @media screen and (max-width: 992px) {
       min-height: 175px;
     }
@@ -1436,4 +1457,9 @@
 
 .z-index-up {
   z-index: 8888;
+}
+
+// Rest
+.onepage-pagination {
+  transform: translate(0, -50%);
 }
