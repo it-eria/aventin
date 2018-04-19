@@ -13,6 +13,17 @@ $(function() {
         }
     });
 
+    video.addEventListener('click', playControl,false);
+
+    function playControl() {
+        $('#video').toggleClass('video-play');
+        if(video.paused == false) { 
+            video.pause(); 
+        } else { 
+            video.play(); 
+        }
+    }
+
     if(!$('body').hasClass('no-one-page-effect')) {
         checkBgColorOfSection(0);
 

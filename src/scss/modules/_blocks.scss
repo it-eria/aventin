@@ -11,6 +11,7 @@
   }
   &--dark {
     background-color: $screen-dark;
+    background-image: linear-gradient( -31deg, rgb(15,16,17) 0%, rgb(50,54,57) 100%);    
     * {
       color: $text-white;
     }
@@ -31,6 +32,20 @@
   @media screen and (max-width: 991px) {
     min-height: 30vh;
     height: auto !important;
+  }
+}
+
+.first-screen {
+  background-image: url(../img/first-screen-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.special-font {
+  padding-left: 60px;
+  @media screen and (max-width: 992px) {
+    padding-left: 15px;
   }
 }
 
@@ -413,35 +428,49 @@
   }
 }
 
+.screen {
+  @media screen and (max-width: 1400px) {
+    padding-top: 50px !important;
+  }
+}
+
+.special-pt {
+  @media screen and (max-width: 1400px) {
+    padding-top: 50px !important;
+  }
+}
+
 .why-we-teaser {
   flex-direction: column;
   justify-content: space-between;
   &__title {
     h4 {
       font-size: 16px;
-      margin: 0 0 10px 0;
+      margin: 0 0 5px 0;
       padding: 0;
       span {
-        display: inline-block;
-        vertical-align: middle;
+        display: block;
+        padding-left: 15px;
         &:first-child {
           @include font(700, false);
-          font-size: 20px;
+          font-size: 16px;
           margin-right: 9px;
+          position: relative;
           &:before {
             content: "";
-            display: inline-block;
-            vertical-align: middle;
+            display: block;
+            position: absolute;
             width: 9px;
             height: 9px;
             border-radius: 50%;
             background-color: $page-pagination-color;
-            margin-right: 8px;
-            margin-top: -2px;
+            top: 7px;
+            left: 0;
           }
         }
         &:last-child {
-          max-width: 157px;
+          padding-left: 15px;
+          letter-spacing: 1.6px;
         }
       }
     }
@@ -675,7 +704,6 @@
   }
   &-transparent {
     padding: 4px;
-    max-width: 160px;
     color: $text-dark;
     background-color: transparent;
     border: 2px solid #8d836a;
@@ -992,15 +1020,53 @@
   overflow: hidden;
   text-align: center;
   padding-top: 25%;
+  background-image: url(../img/aventin_207_1200.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 100;
+  }
+  &:before {
+    content: '';
+    display: block;
+    background-color: #000;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/play-ico.png);
+    background-repeat: no-repeat;
+    background-position: 57% 50%;
+    z-index: 200;
+  }
   iframe,
   video {
     position: absolute;
-    display: inline-block;
+    z-index: 400;
+    display: block;
     width: 85%;
     height: 100%;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    opacity: 0;
+    background-color: #000;
+    &.video-play {
+      opacity: 1;
+    }
     @media screen and (max-width: 991px) {
       width: 100%;
     }
@@ -1347,4 +1413,27 @@
 
     }
   }
+}
+
+.first-screen-row {
+  position: relative;
+  .square {
+    display: block;
+    width: calc(100% - 30px);
+    min-height: 315px;
+    background-color: #f2f2f2;
+    border: 2px solid rgb(126, 116, 106);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: 992px) {
+      min-height: 175px;
+    }
+  }
+}
+
+.z-index-up {
+  z-index: 8888;
 }
