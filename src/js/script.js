@@ -18,14 +18,19 @@ $(function() {
         }
     });
 
-    video.addEventListener('click', playControl,false);
+    if($('#video').length > 0) {
+        var video = document.getElementById('video');
 
-    function playControl() {
-        $('#video').toggleClass('video-play');
-        if(video.paused == false) { 
-            video.pause(); 
-        } else { 
-            video.play(); 
+        video.addEventListener('click', playControl,false);
+
+        function playControl() {
+            $('#video').addClass('video-play');
+            $('.video-wraper').addClass('clicked');
+            if(video.paused == false) { 
+                video.pause(); 
+            } else { 
+                video.play(); 
+            }
         }
     }
 
