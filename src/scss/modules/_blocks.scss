@@ -1496,3 +1496,19 @@
     }
   }
 }
+
+.t-100 {
+  top: 100px;
+  @media screen and (max-width: 991px) {
+      top: 5px;
+  }
+}
+
+.l--50 {
+  left: -50px;
+}
+
+.tr-0 {
+  top: 0;
+  right: 0;
+}
