@@ -70,7 +70,7 @@ $(function() {
         }
     }
 
-
+    checkBgColorOfSection(1);
 
     function checkBgColorOfSection(index) {
         if($('.screen[data-index='+index+']').hasClass('screen--dark')) {
@@ -81,6 +81,11 @@ $(function() {
             $('.img-white').show();
             $('.img-dark').hide();
             $('.header, .footer').removeClass('on-dark-screen');
+        }
+        if(index == 1) {
+            $('.burger-btn').addClass('burger-btn__on-first-screen');
+        } else {
+            $('.burger-btn').removeClass('burger-btn__on-first-screen');
         }
     }
 
