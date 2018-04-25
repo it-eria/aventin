@@ -210,6 +210,13 @@
   &--dark {
     background-color: $screen-dark;
   }
+  .logo {
+    img {
+      width: 100%;
+      max-width: 130px;
+      height: auto;
+    }
+  }
   @media screen and (max-width: 991px) {
     position: relative;
     padding: 15px 0;
