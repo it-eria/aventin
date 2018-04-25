@@ -7,6 +7,8 @@ html {
   }
   @media screen and (max-width: 992px) {
     overflow: auto !important;
+    height: auto;
+    position: relative;
   }
   &.no-one-page-effect {
     overflow: auto;

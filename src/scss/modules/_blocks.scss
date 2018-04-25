@@ -44,7 +44,7 @@
   position: relative;
   h2 {
     font-family: "MuseoSansCyrl-100";
-    font-size: 60px;
+    font-size: 50px;
     display: inline-block;
     position: relative;
     z-index: 200;
@@ -329,7 +329,7 @@
     width: 100%;
   }
   @media screen and (max-width: 991px) {
-    position: static;
+    position: absolute !important;
     padding: 15px 0 5px;
     * {
       color: $text-white;
