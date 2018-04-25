@@ -9,7 +9,9 @@
 </head>
 <body class="no-one-page-effect">
     {{> templates/inner-pages/team-header }}
-    {{> templates/inner-pages/team }}    
+    {{#inner-team}}
+        {{> templates/inner-pages/team }}    
+    {{/inner-team}}
     {{> templates/screens/08-home-we-in-insta-screen }}
     {{> templates/screens/09-home-contacts-screen }}
     {{> templates/inner-pages/team-footer }}

@@ -186,7 +186,7 @@
   .img-dark {
     display: none;
   }
-  &.on-dark-screen {
+  &.on-dark-screen, &__team {
     * {
       color: $text-white;
       @media screen and (max-width: 991px) {
@@ -207,9 +207,21 @@
   &.on-scroll {
     opacity: 0;
   }
-  &--dark {
-    background-color: $screen-dark;
-  }
+  // &--dark {
+  //   * {
+  //     color: $text-white;
+  //   }
+  //   .burger-btn {
+  //     span,
+  //     &:before,
+  //     &:after {
+  //       background-color: $text-white;
+  //       @media screen and (max-width: 991px) {
+  //         background-color: $text-dark;
+  //       }
+  //     }
+  //   }
+  // }
   .logo {
     img {
       width: 100%;
@@ -217,13 +229,36 @@
       height: auto;
     }
   }
+  &__inner {
+    background-color: transparent;
+  }
   @media screen and (max-width: 991px) {
     position: relative;
     padding: 15px 0;
     min-height: auto;
-    background-color: #f3f3f3;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+    // background-color: #f3f3f3;
+    // box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+    &__inner {
+      background-color: transparent;
+      &.header--dark {
+        .burger-btn {
+          span,
+          &:before,
+          &:after {
+            background-color: $text-white;
+          }
+        }
+      }
+    }
   }
+}
+
+.screen.screen__inner-first {
+  padding-top: 150px !important;
+}
+
+.screen.screen__inner-last {
+  padding-bottom: 100px !important;
 }
 
 .contacts-list {
@@ -282,12 +317,20 @@
     }
   }
   &--dark {
-    background-image: linear-gradient( -31deg, rgb(15,16,17) 0%, rgb(50,54,57) 100%);
+    * {
+      color: $text-white;
+    }
+  }
+  &__inner {
+    background-image: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
   @media screen and (max-width: 991px) {
     position: static;
     padding: 15px 0 5px;
-    background-image: linear-gradient( -31deg, rgb(15,16,17) 0%, rgb(50,54,57) 100%);
     * {
       color: $text-white;
       font-size: 12px;
@@ -301,10 +344,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 8888;
   overflow: auto;
-  background-color: $screen-dark;
+  background-image: linear-gradient( -31deg, rgb(15,16,17) 0%, rgb(50,54,57) 100%);    
   a {
     @include font(100, false);
     font-size: 25px;
@@ -1195,16 +1238,16 @@
   justify-content: flex-start;
   .team-slider__slide {
     height: auto !important;
-    flex: 1 0 15%;
+    flex-basis: 18%;
     margin: 0 15px 60px 0;
-    max-width: 219px !important;
+    padding: 0;
     .photo-wraper {
       max-width: 100% !important;
       width: 100%;
-      padding-top: 150%;
+      padding-top: 185%;
     }
     @media screen and (max-width: 480px) {
-      flex: 1 0 40%;
+      flex-basis: 40%;
     }
   }
   @media screen and (max-width: 767px) {
