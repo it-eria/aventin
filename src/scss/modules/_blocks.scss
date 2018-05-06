@@ -318,7 +318,8 @@
   }
   &--dark {
     * {
-      color: $text-white;
+      // color: $text-white;
+      color: #000;
     }
   }
   &__inner {
@@ -611,6 +612,11 @@
     }
     @media screen and (max-width: 767px) {
       padding-top: 56%;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1400px) {
+      width: 75%;
+      padding-top: 100%;
+      margin: 0 auto;
     }
   }
 }
@@ -1620,5 +1626,12 @@
   .header, .footer {
     background-color: transparent;
     background-image: none;
+  }
+}
+
+.special-container {
+  @media screen and (min-width: 993px) and (max-width: 1400px) {
+    transform: scale(0.75) translateY(-15%);
+    transform-style: preserve-3d;
   }
 }
